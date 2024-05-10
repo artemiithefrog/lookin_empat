@@ -54,13 +54,16 @@ class CustomBottomNavigationBar extends StatelessWidget {
   }) {
     final isSelected = selectedIndex == index;
 
+    ThemeData theme = Theme.of(context);
     return BottomNavigationBarItem(
       label: '',
       icon: Padding(
         padding: const EdgeInsets.only(top: 8.0),
         child: SvgPicture.asset(
           iconPath,
-          color: isSelected ? Colors.black : Colors.grey,
+          color: isSelected ?
+          theme.bottomNavigationBarTheme.selectedItemColor :
+          theme.bottomNavigationBarTheme.unselectedItemColor,
         ),
       ),
     );

@@ -5,6 +5,7 @@ import 'package:lookin_empat/screens/feed_screen.dart';
 import 'package:lookin_empat/screens/liked_looks_screen.dart';
 import 'package:lookin_empat/screens/profile_screen.dart';
 import 'package:lookin_empat/screens/search_screen.dart';
+import 'package:lookin_empat/style/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,6 +47,9 @@ class _MyAppState extends State<MyApp> {
           },
         ),
       ),
+      theme: LookInTheme.lightTheme,
+      darkTheme: LookInTheme.darkTheme,
+      themeMode: ThemeMode.system,
     );
   }
 }
