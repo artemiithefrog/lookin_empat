@@ -1,7 +1,7 @@
-import '../widgets/section.dart';
+import '../widgets/section_widget.dart';
 
 abstract class ISectionService {
-  List<Section> getSections({
+  List<SectionWidget> getSections({
     required double width,
     bool onPressedActive = false,
     Function(int)? onPressed,

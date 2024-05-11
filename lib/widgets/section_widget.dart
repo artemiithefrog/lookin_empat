@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lookin_empat/models/section_dto.dart';
 
-class Section extends StatelessWidget {
-  const Section({
+class SectionWidget extends StatelessWidget {
+  const SectionWidget({
     super.key,
     required this.onPressed,
     this.onPressedActive = true,

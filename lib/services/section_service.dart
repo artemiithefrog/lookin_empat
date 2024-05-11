@@ -1,7 +1,7 @@
 import 'package:lookin_empat/repositories/i_section_repository.dart';
 import 'package:lookin_empat/repositories/section_repository.dart';
 import 'package:lookin_empat/services/i_section_service.dart';
-import '../widgets/section.dart';
+import '../widgets/section_widget.dart';
 
 class SectionService implements ISectionService{
   final ISectionRepository _sectionRepository;
@@ -9,7 +9,7 @@ class SectionService implements ISectionService{
   SectionService(this._sectionRepository);
 
   @override
-  List<Section> getSections({
+  List<SectionWidget> getSections({
     required double width,
     bool onPressedActive = false,
     Function(int)? onPressed,
@@ -21,7 +21,7 @@ class SectionService implements ISectionService{
 
     return SectionRepository.sectionDTOs!
         .map(
-          (dto) => Section(
+          (dto) => SectionWidget(
             sectionDTO: dto,
             onPressed: onPressed ?? (i) => {},
             width: width,
