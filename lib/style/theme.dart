@@ -12,7 +12,14 @@ class LookInTheme {
       secondary: CColors.lightSecondaryColor,
     ),
     scaffoldBackgroundColor: CColors.lightBackgroundColor,
-    textTheme: const TextTheme(),
+    textTheme: const TextTheme(
+      // todo add colors
+      titleMedium: TextStyle(
+        color: CColors.lightDividerColor,
+        fontWeight: FontWeight.w800,
+        fontSize: 20,
+      ),
+    ),
     iconTheme: const IconThemeData(color: CColors.lightIconColor),
     dividerColor: CColors.lightDividerColor,
     appBarTheme: const AppBarTheme(
@@ -35,7 +42,14 @@ class LookInTheme {
       secondary: CColors.darkSecondaryColor,
     ),
     scaffoldBackgroundColor: CColors.darkBackgroundColor,
-    textTheme: const TextTheme(),
+    textTheme: const TextTheme(
+      // todo add colors
+      titleMedium: TextStyle(
+        color: CColors.darkUnselectedItemColor,
+        fontWeight: FontWeight.w800,
+        fontSize: 20
+      ),
+    ),
     iconTheme: const IconThemeData(color: CColors.darkIconColor),
     dividerColor: CColors.darkDividerColor,
     appBarTheme: const AppBarTheme(
