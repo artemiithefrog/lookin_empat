@@ -5,6 +5,7 @@ import 'package:lookin_empat/screens/feed_screen.dart';
 import 'package:lookin_empat/screens/liked_looks_screen.dart';
 import 'package:lookin_empat/screens/profile_screen.dart';
 import 'package:lookin_empat/screens/search_screen.dart';
+import 'package:lookin_empat/screens/sections_screen.dart';
 import 'package:lookin_empat/style/theme.dart';
 
 void main() {
@@ -23,7 +24,7 @@ class _MyAppState extends State<MyApp> {
 
   final List<Widget> screens = [
     const FeedScreen(),
-    const SearchScreen(),
+    SectionsScreen(),
     const AddNewLookScreen(),
     const SavedLooksScreen(),
     const ProfileScreen(),
