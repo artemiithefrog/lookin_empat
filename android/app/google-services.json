@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "540378094195",
+    "project_id": "lookin-empat-92ac3",
+    "storage_bucket": "lookin-empat-92ac3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540378094195:android:cc98d1b5fa61cdd82ae806",
+        "android_client_info": {
+          "package_name": "com.example.lookin_empat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkg3O_YVTkMJl1nTPM3Fezq7KsqbB9AA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
