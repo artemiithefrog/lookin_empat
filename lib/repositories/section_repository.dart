@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lookin_empat/repositories/i_section_repository.dart';
 import '../models/section_dto.dart';
 
-class SectionRepository {
+class SectionRepository implements ISectionRepository {
   static int staticIdCounter = 1;
   static List<SectionDTO>? sectionDTOs;
 
@@ -12,10 +13,11 @@ class SectionRepository {
     id: 0,
     color: Colors.red,
     name: "Error",
-    iconData: Icons.error
+    iconData: Icons.error,
   );
 
-  static List<SectionDTO> initialiseSections() {
+  @override
+  List<SectionDTO> initialiseSections() {
     var temp = [
       SectionDTO(
         id: staticIdCounter++,
@@ -53,8 +55,9 @@ class SectionRepository {
     return sectionDTOs!;
   }
 
-  static SectionDTO? getByID(int id) {
-    if(sectionDTOs == null) {
+  @override
+  SectionDTO? getByID(int id) {
+    if (sectionDTOs == null) {
       return null;
     }
 
@@ -66,8 +69,9 @@ class SectionRepository {
     return null;
   }
 
-  static SectionDTO getByIndex(int i) {
-    if(sectionDTOs == null) {
+  @override
+  SectionDTO getByIndex(int i) {
+    if (sectionDTOs == null) {
       return errorDTO;
     }
 
