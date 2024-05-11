@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lookin_empat/models/section_dto.dart';
 
 class Section extends StatelessWidget {
-  Section({
+  const Section({
     super.key,
     required this.onPressed,
     this.onPressedActive = true,
@@ -12,10 +12,8 @@ class Section extends StatelessWidget {
   });
 
   final SectionDTO sectionDTO;
-
   final Function(int) onPressed;
-  bool? onPressedActive;
-
+  final bool? onPressedActive;
   final double width;
 
   // size of the icon relative to the size of the whole section widget
@@ -49,14 +47,39 @@ class Section extends StatelessWidget {
               color: sectionDTO.color,
               borderRadius: BorderRadius.circular(16),
             ),
-            child: iconWidget,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  sectionDTO.name,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: getOutlineColor(sectionDTO.color),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                iconWidget,
+                const SizedBox(height: 4),
+                Text(
+                  "Count: --", // todo add section count (maybe by sectionDTO.id)
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: getOutlineColor(sectionDTO.color),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 
-  getOutlineColor(Color color) {
+  Color getOutlineColor(Color color) {
     int darkerShade = -100;
     return Color.fromARGB(
       color.alpha,

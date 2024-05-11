@@ -40,13 +40,13 @@ class SectionRepository implements ISectionRepository {
       SectionDTO(
         id: staticIdCounter++,
         color: Colors.blue,
-        name: 'Caps',
+        name: 'Beanies',
         svgIconPath: '${iconPathBase}beanie.svg',
       ),
       SectionDTO(
         id: staticIdCounter++,
         color: Colors.yellow,
-        name: 'Caps',
+        name: 'Blouses',
         svgIconPath: '${iconPathBase}blouse.svg',
       ),
     ];
