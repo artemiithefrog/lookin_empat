@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 
 // Custom Colors
 abstract class CColors {
+  static const screenLightGreyColor = Color.fromARGB(255, 248, 247, 255);
+  static const lookInTextColor = Color.fromARGB(255, 223, 222, 229);
+  static const letsStartBlueColor = Color.fromARGB(255, 45, 41, 180);
+  static const redColor = Color.fromARGB(255, 254, 0, 0);
+
   static const lightPrimaryColor = Color(0xFF02367B);
   static const lightSecondaryColor = Color(0xFF006CA5);
   static const lightBackgroundColor = Color(0xFFFFFFFF);
