@@ -21,3 +21,4 @@ flutter:
 
   assets:
     - lib/assets/icons/
+    - lib/assets/icons/section/
