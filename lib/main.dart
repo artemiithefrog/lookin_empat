@@ -1,6 +1,8 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:lookin_empat/custom_bottom_navigation_bar.dart';
 import 'package:lookin_empat/screens/add_new_look_screen.dart';
+import 'package:lookin_empat/screens/auth/widget_tree.dart';
 import 'package:lookin_empat/screens/feed_screen.dart';
 import 'package:lookin_empat/screens/liked_looks_screen.dart';
 import 'package:lookin_empat/screens/profile_screen.dart';
@@ -8,8 +10,10 @@ import 'package:lookin_empat/screens/search_screen.dart';
 import 'package:lookin_empat/screens/sections_screen.dart';
 import 'package:lookin_empat/style/theme.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const WidgetTree());
 }
 
 class MyApp extends StatefulWidget {
@@ -27,7 +31,7 @@ class _MyAppState extends State<MyApp> {
     SectionsScreen(),
     const AddNewLookScreen(),
     const SavedLooksScreen(),
-    const ProfileScreen(),
+    ProfileScreen(),
   ];
 
   @override
